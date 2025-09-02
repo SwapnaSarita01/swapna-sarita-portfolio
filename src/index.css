@@ -140,7 +140,8 @@
   }
 
   .btn-accent {
-    @apply bg-gradient-to-r from-accent to-accent-muted text-accent-foreground px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-accent hover:scale-105 active:scale-95;
+    @apply text-accent-foreground px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-accent hover:scale-105 active:scale-95;
+    background: linear-gradient(to right, hsl(var(--accent)), hsl(var(--accent-muted)));
   }
 
   .btn-ghost {
@@ -153,7 +154,8 @@
   }
 
   .card-accent {
-    @apply bg-gradient-to-br from-accent-muted to-card rounded-2xl p-6 shadow-accent transition-all duration-300 hover:scale-105;
+    @apply rounded-2xl p-6 shadow-accent transition-all duration-300 hover:scale-105;
+    background: linear-gradient(135deg, hsl(var(--accent-muted)), hsl(var(--card)));
   }
 
   .card-project {
