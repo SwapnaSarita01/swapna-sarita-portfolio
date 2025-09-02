@@ -47,7 +47,7 @@ const ProjectsSection = () => {
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
                   {/* Project Image */}
                   <div className="relative">
-                    <div className="card-project">
+                    <div className="card-project group">
                       <div className="relative overflow-hidden">
                         <img 
                           src={project.image} 

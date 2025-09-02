@@ -159,7 +159,7 @@
   }
 
   .card-project {
-    @apply bg-card rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group cursor-pointer;
+    @apply bg-card rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer;
   }
 
   /* Animations */
