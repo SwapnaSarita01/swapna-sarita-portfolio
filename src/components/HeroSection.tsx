@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Download, Mail, ArrowDown } from "lucide-react";
-import heroPortrait from "@/assets/hero-portrait.jpg";
+import heroPortrait from "@/assets/swapna-profile.jpg";
 import heroBackground from "@/assets/hero-background.jpg";
 
 const HeroSection = () => {
