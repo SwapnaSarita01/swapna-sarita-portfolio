@@ -82,8 +82,8 @@ const ExperienceSection = () => {
                       <h4 className="text-lg font-semibold mb-3">Technologies & Tools</h4>
                       <div className="flex flex-wrap gap-2">
                         {[
-                          "AWS", "Kubernetes", "Docker", "Jenkins", "Terraform", 
-                          "Kibana", "CloudWatch", "Python", "Linux", "CI/CD"
+                          "AWS", "Kubernetes", "Docker", "Kibana", 
+                          "Python", "Linux", "Grafana", "Superset"
                         ].map((tech) => (
                           <span 
                             key={tech}

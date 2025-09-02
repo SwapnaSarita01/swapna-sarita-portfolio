@@ -106,13 +106,12 @@ const ProjectsSection = () => {
                     </div>
 
                     <div className="flex gap-4">
-                      <Button className="btn-hero group">
+                      <Button 
+                        className="btn-hero group"
+                        onClick={() => window.open('https://github.com/SwapnaSarita01/Devsecops-3-Tier-Kubernetes-Project', '_blank')}
+                      >
                         <Github className="w-5 h-5 mr-2 transition-transform group-hover:scale-110" />
                         View Code
-                      </Button>
-                      <Button variant="outline" className="btn-ghost group">
-                        <ExternalLink className="w-5 h-5 mr-2 transition-transform group-hover:scale-110" />
-                        Live Demo
                       </Button>
                     </div>
                   </div>

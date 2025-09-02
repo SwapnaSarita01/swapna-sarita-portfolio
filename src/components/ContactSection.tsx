@@ -1,7 +1,60 @@
 import { Mail, Phone, Linkedin, Github, MapPin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import emailjs from '@emailjs/browser';
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
 
 const ContactSection = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        'service_q1d3kwm',
+        'template_ubva06r',
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_name: 'Swapna Sarita Kar'
+        },
+        'sm1bE1kxIj2lR-ob'
+      );
+
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact me directly via email.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   const contactInfo = [
     {
       icon: Mail,
@@ -87,11 +140,15 @@ const ContactSection = () => {
               <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl">
                 <h3 className="text-2xl font-bold mb-6 text-accent-foreground">Quick Message</h3>
                 
-                <form className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <label className="block text-sm font-medium text-accent-foreground mb-2">Name</label>
                     <input 
                       type="text" 
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
                       className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                       placeholder="Your name"
                     />
@@ -101,6 +158,10 @@ const ContactSection = () => {
                     <label className="block text-sm font-medium text-accent-foreground mb-2">Email</label>
                     <input 
                       type="email" 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
                       className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                       placeholder="your.email@example.com"
                     />
@@ -110,14 +171,18 @@ const ContactSection = () => {
                     <label className="block text-sm font-medium text-accent-foreground mb-2">Message</label>
                     <textarea 
                       rows={4}
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
                       className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
                       placeholder="Tell me about your project or opportunity..."
                     />
                   </div>
                   
-                  <Button className="w-full btn-hero group">
+                  <Button type="submit" disabled={isSubmitting} className="w-full btn-hero group">
                     <Send className="w-5 h-5 mr-2 transition-transform group-hover:translate-x-1" />
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                 </form>
               </div>

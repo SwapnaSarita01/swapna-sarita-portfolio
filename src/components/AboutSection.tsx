@@ -61,7 +61,7 @@ const AboutSection = () => {
             <div className="space-y-6 fade-up animate" style={{ animationDelay: '0.4s' }}>
               <div className="grid grid-cols-2 gap-4">
                 <div className="card-accent text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">1.5+</div>
+                  <div className="text-3xl font-bold text-primary mb-2">2+</div>
                   <div className="text-sm text-muted-foreground">Years Experience</div>
                 </div>
                 <div className="card-accent text-center">
