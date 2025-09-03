@@ -25,17 +25,33 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    // Get EmailJS configuration from environment variables
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    // Check if all required environment variables are set
+    if (!serviceId || !templateId || !publicKey) {
+      toast({
+        title: "Configuration Error",
+        description: "EmailJS is not properly configured. Please contact the site administrator.",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
       await emailjs.send(
-        'service_q1d3kwm',
-        'template_ubva06r',
+        serviceId,
+        templateId,
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
           to_name: 'Swapna Sarita Kar'
         },
-        'sm1bE1kxwIj2lR-ob'
+        publicKey
       );
 
       toast({
