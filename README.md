@@ -22,19 +22,16 @@ Built with **React, Vite, TypeScript, TailwindCSS, and shadcn/ui**, featuring an
 ---
 
 ## 📂 Project Structure
-├── public # Static assets
-├── src # Main source code
-│ ├── components # Reusable components
-│ ├── pages # Website pages
-│ ├── styles # Tailwind + custom styles
-│ └── ...
+```plaintext
+├── public          # Static assets
+├── src             # Main source code
+│   ├── components  # Reusable components
+│   ├── pages       # Website pages
+│   ├── styles      # Tailwind + custom styles
+│   └── ...
 ├── index.html
 ├── package.json
 └── README.md
-
-yaml
-Copy code
-
 ---
 
 ## 🔗 Live Demo
