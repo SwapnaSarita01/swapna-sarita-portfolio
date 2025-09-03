@@ -1,73 +1,60 @@
-# Welcome to your Lovable project
+# 🚀 Swapna's Portfolio Website
 
-## Project info
+A modern personal portfolio website showcasing my work, skills, and experience as a **Cloud & DevOps Engineer**.  
+Built with **React, Vite, TypeScript, TailwindCSS, and shadcn/ui**, featuring animations, responsive design, and integrated contact form.
 
-**URL**: https://lovable.dev/projects/42f12b1b-eac1-4c46-bbdc-e474bcb6593b
+---
 
-## How can I edit this code?
+## 🌟 Features
+- ⚡ Modern & responsive UI with smooth animations  
+- 🎨 Built with React + Tailwind + shadcn/ui  
+- 📬 Contact form with EmailJS integration  
+- 🚀 Deployed for fast and reliable access  
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🛠 Tech Stack
+- **Frontend:** React, TypeScript, Vite  
+- **Styling:** Tailwind CSS, shadcn/ui  
+- **Contact Form:** EmailJS  
+- **Deployment:** GitHub Pages / Vercel / AWS (depending on your deployment)  
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/42f12b1b-eac1-4c46-bbdc-e474bcb6593b) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📂 Project Structure
+├── public # Static assets
+├── src # Main source code
+│ ├── components # Reusable components
+│ ├── pages # Website pages
+│ ├── styles # Tailwind + custom styles
+│ └── ...
+├── index.html
+├── package.json
+└── README.md
 
-**Use your preferred IDE**
+yaml
+Copy code
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🔗 Live Demo
+👉 [View My Portfolio](https://your-deployed-link.com)
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 📬 Contact
+- **Email:** swapnasaritakar@gmail.com  
+- **LinkedIn:** [linkedin.com/in/swapna-sarita](https://www.linkedin.com/in/swapna-sarita/)  
+- **GitHub:** [github.com/SwapnaSarita01](https://github.com/SwapnaSarita01)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 👩‍💻 About Me
+I am a **Cloud & DevOps Engineer** focused on building secure, scalable, and automated cloud-native systems.  
+Skilled in AWS, Kubernetes, Docker, Terraform, and CI/CD, with hands-on experience in monitoring and observability.  
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Driven by a passion for solving complex infrastructure challenges and enabling reliable, high-performance systems.  
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/42f12b1b-eac1-4c46-bbdc-e474bcb6593b) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+✨ This portfolio website is continuously evolving to showcase my projects, certifications, and achievements. Stay tuned for updates!
