@@ -38,7 +38,7 @@ Copy code
 ---
 
 ## 🔗 Live Demo
-👉 [View My Portfolio](https://your-deployed-link.com)
+👉 [View My Portfolio](http://swapnasaritakar.space/)
 
 ---
 
@@ -50,7 +50,7 @@ Copy code
 ---
 
 ## 👩‍💻 About Me
-I am a **Cloud & DevOps Engineer** focused on building secure, scalable, and automated cloud-native systems.  
+I am a **Cloud Engineer** focused on building secure, scalable, and automated cloud-native systems.  
 Skilled in AWS, Kubernetes, Docker, Terraform, and CI/CD, with hands-on experience in monitoring and observability.  
 
 Driven by a passion for solving complex infrastructure challenges and enabling reliable, high-performance systems.  
