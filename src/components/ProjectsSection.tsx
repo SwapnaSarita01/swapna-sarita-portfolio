@@ -1,6 +1,7 @@
-import { ExternalLink, Github, Shield, Server, Monitor } from "lucide-react";
+import { ExternalLink, Github, Shield, Server, Monitor, Cloud } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import cloudDevOpsInfrastructure from "@/assets/cloud-devops-infrastructure.jpg";
+import swiggyDevOpsAws from "@/assets/swiggy-devops-aws.jpg";
 
 const ProjectsSection = () => {
   const projects = [
@@ -18,7 +19,25 @@ const ProjectsSection = () => {
         "High availability and auto-scaling"
       ],
       links: {
-        github: "#",
+        github: "https://github.com/SwapnaSarita01/Devsecops-3-Tier-Kubernetes-Project",
+        demo: "#"
+      }
+    },
+    {
+      title: "Swiggy-Clone-DevSecOps-AWS",
+      description: "Developed and deployed a Swiggy-Clone Food Delivery Application on AWS ECS using a Blue-Green Deployment strategy. Designed a fully automated CI/CD pipeline with AWS CodePipeline, CodeBuild, and CodeDeploy.",
+      image: swiggyDevOpsAws,
+      technologies: ["AWS ECS", "AWS CodePipeline", "AWS CodeBuild", "AWS CodeDeploy", "Docker", "Blue-Green Deployment", "Container Security"],
+      features: [
+        "Blue-Green deployment strategy",
+        "Fully automated CI/CD pipeline",
+        "Container image scanning integration", 
+        "AWS native DevOps services",
+        "Production-ready deployment pipeline",
+        "DevSecOps principles enforcement"
+      ],
+      links: {
+        github: "https://github.com/SwapnaSarita01/Swiggy-Clone-DevSecOps-AWS",
         demo: "#"
       }
     }
@@ -60,7 +79,11 @@ const ProjectsSection = () => {
                     
                     {/* Floating icons */}
                     <div className="absolute -top-4 -right-4 p-3 bg-primary rounded-xl shadow-lg">
-                      <Shield className="w-6 h-6 text-primary-foreground" />
+                      {index === 0 ? (
+                        <Shield className="w-6 h-6 text-primary-foreground" />
+                      ) : (
+                        <Cloud className="w-6 h-6 text-primary-foreground" />
+                      )}
                     </div>
                     <div className="absolute -bottom-4 -left-4 p-3 bg-accent rounded-xl shadow-lg">
                       <Server className="w-6 h-6 text-accent-foreground" />
@@ -108,7 +131,7 @@ const ProjectsSection = () => {
                     <div className="flex gap-4">
                       <Button 
                         className="btn-hero group"
-                        onClick={() => window.open('https://github.com/SwapnaSarita01/Devsecops-3-Tier-Kubernetes-Project', '_blank')}
+                        onClick={() => window.open(project.links.github, '_blank')}
                       >
                         <Github className="w-5 h-5 mr-2 transition-transform group-hover:scale-110" />
                         View Code
