@@ -1,13 +1,13 @@
 import { ExternalLink, Github, Shield, Server, Monitor } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import projectDevSecOps from "@/assets/project-devsecops.jpg";
+import cloudDevOpsInfrastructure from "@/assets/cloud-devops-infrastructure.jpg";
 
 const ProjectsSection = () => {
   const projects = [
     {
       title: "DevSecOps 3-Tier Kubernetes Project",
       description: "Built a secure, scalable 3-tier architecture using Kubernetes, CI/CD, and DevSecOps best practices. Integrated monitoring and automated security scanning to ensure high availability and compliance.",
-      image: projectDevSecOps,
+      image: cloudDevOpsInfrastructure,
       technologies: ["Kubernetes", "Docker", "Jenkins", "Terraform", "Prometheus", "Grafana", "Security Scanning"],
       features: [
         "3-tier architecture with microservices",

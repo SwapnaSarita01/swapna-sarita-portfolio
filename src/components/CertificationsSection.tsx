@@ -6,19 +6,29 @@ const CertificationsSection = () => {
       title: "CCNAv7: Introduction to Networks",
       issuer: "Cisco Networking Academy",
       type: "Networking Fundamentals",
-      year: "2023"
+      year: "2021",
+      link: "https://www.credly.com/badges/b8cd4d64-72f5-4845-9735-da95ccdbe4bb/public_url"
     },
     {
       title: "CCNAv7: Switching, Routing, and Wireless Essentials", 
       issuer: "Cisco Networking Academy",
       type: "Network Infrastructure",
-      year: "2023"
+      year: "2021",
+      link: "https://www.credly.com/badges/b8c9f09c-86f9-4bcf-957f-57d9dacb62f0/public_url"
+    },
+    {
+      title: "CCNA: Enterprise Networking, Security, and Automation",
+      issuer: "Cisco Networking Academy",
+      type: "Network Security",
+      year: "2022",
+      link: "https://www.credly.com/badges/43350473-f406-426d-821f-a1bb6739f08f/public_url"
     },
     {
       title: "PCAP: Programming Essentials in Python",
       issuer: "OpenEDG Python Institute",
       type: "Programming",
-      year: "2022"
+      year: "2022",
+      link: "https://drive.google.com/file/d/1vRQYWdVi_BIKablWvBivpaYjn28nlq4l/view"
     }
   ];
 
@@ -56,9 +66,15 @@ const CertificationsSection = () => {
                 Professional Certifications
               </h3>
               
-              <div className="space-y-4">
+                <div className="space-y-4">
                 {certifications.map((cert, index) => (
-                  <div key={index} className="card-elevated group cursor-pointer">
+                  <a 
+                    key={index} 
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block card-elevated group cursor-pointer hover:scale-105 transition-transform"
+                  >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
                         <h4 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">
@@ -72,7 +88,7 @@ const CertificationsSection = () => {
                       </div>
                       <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                     </div>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>
